@@ -1,0 +1,105 @@
+@use "@/styles/main.scss" as *;
+
+.container {
+  @media all and (width >= $min_desktop) {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+}
+
+.main_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  @media all and (width >= $min_table) {
+    align-items: center;
+  }
+  @media all and (width >= $min_desktop) {
+    gap: 40px;
+    align-items: flex-start;
+  }
+}
+
+.project_text {
+  @include fontRegular(16px, 300, 16px, $main_text_color, left, 0.03em);
+  @media all and (width >= $min_table) {
+    font-size: 20px;
+  }
+}
+
+.title {
+  @include fontRegular(56px, 400, 56px, $title_text_color);
+  @media all and (width >= $min_table) {
+    font-size: 120px;
+  }
+  @media all and (width >= $min_desktop) {
+    font-size: 100px;
+  }
+}
+
+.choose_your_faith {
+  @include fontRegular(25px, 400, 25px, $seconds_text_color);
+  font-style: italic;
+  max-width: 250px;
+  @media all and (width >= $min_table) {
+    font-size: 36px;
+    max-width: 352px;
+  }
+  @media all and (width >= $min_desktop) {
+    margin-bottom: 42px;
+  }
+}
+
+.img {
+  margin-bottom: 16px;
+  @media all and (width >= $min_table) {
+    width: 615px;
+  }
+  @media all and (width >= $min_desktop) {
+    display: none;
+  }
+  &_desktop {
+    display: none;
+    @media all and (width >= $min_desktop) {
+      display: block;
+      width: 672px;
+    }
+  }
+}
+
+.link_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  @media all and (width >= $min_table) {
+    flex-direction: row;
+    gap: 36px;
+    width: 100%;
+  }
+  @media all and (width >= $min_desktop) {
+    gap: 20px;
+  }
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 64px;
+  border-radius: 50px;
+  @include fontRegular(18px, 300, 18px, $button_text_color, center, 0.03em);
+  background-color: $btn_active_bg;
+  @media all and (width >= $min_table) {
+    width: calc((100% - 36px) / 2);
+  }
+  @media all and (width >= $min_desktop) {
+  }
+}
+
+.additional_link_style {
+  background-color: transparent;
+  color: $title_text_color;
+  border: 1px solid $border_v2;
+}

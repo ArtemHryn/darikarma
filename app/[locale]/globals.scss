@@ -52,6 +52,18 @@ a {
   text-decoration: none;
   font-style: normal;
   cursor: pointer;
+  display: block;
+  transition: $buttons_and_links_hover;
+  @media (hover: hover) {
+    &:is(:hover, :focus) {
+      scale: 1.05;
+    }
+  }
+  @media (hover: none) {
+    &:is(:active, :focus) {
+      scale: 1.05;
+    }
+  }
 }
 
 p,

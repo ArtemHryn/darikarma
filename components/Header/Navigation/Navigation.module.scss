@@ -28,7 +28,4 @@
   align-items: center;
   justify-content: center;
   @include fontRegular(18px, 400, 18px);
-  @media all and (width >= $min_desktop) {
-    height: 100%;
-  }
 }
