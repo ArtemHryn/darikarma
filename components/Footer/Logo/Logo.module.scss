@@ -1,0 +1,21 @@
+@use "@/styles/main.scss" as *;
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.img {
+  @media all and (width >= $min_table) {
+    width: 119px;
+    height: 123px;
+  }
+}
+
+.title {
+  @include fontRegular(50px, 400, 50px, $title_text_color);
+  @media all and (width >= $min_table) {
+    font-size: 54px;
+  }
+}

@@ -1,0 +1,23 @@
+@use "@/styles/main.scss" as *;
+
+.nav_list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  @media all and (width >= $min_table) {
+    row-gap: 4px;
+    align-items: flex-end;
+    height: 80px;
+    width: 370px;
+  }
+}
+
+.nav_item {
+  min-width: calc((100% - 16px) / 2);
+  @media all and (width >= $min_table) {
+  }
+}
+
+.nav_link {
+  @include fontRegular(18px, 400, 18px);
+}

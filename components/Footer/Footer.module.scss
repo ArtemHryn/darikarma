@@ -1,0 +1,20 @@
+@use "@/styles/main.scss" as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  max-width: $min_mobile;
+  padding: 0 28px;
+  margin-inline: auto;
+  @media all and (width >= $min_table) {
+    flex-direction: row;
+    max-width: $min_table;
+    align-items: flex-end;
+    width: 100%;
+    justify-content: space-between;
+  }
+  @media all and (width >= $min_desktop) {
+    max-width: $min_desktop;
+  }
+}

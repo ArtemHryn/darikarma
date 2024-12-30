@@ -1,0 +1,86 @@
+@use "@/styles/main.scss" as *;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  height: 100%;
+  position: relative;
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable;
+}
+
+body {
+  height: 100%;
+  position: relative;
+  color: $main_text_color;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(158, 118, 255, 0.18) 50%,
+    #fff
+  );
+
+  background-size: 200% 200%;
+  animation: rotateBackground 5s linear infinite;
+}
+
+@keyframes rotateBackground {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 70%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 6px; /* Округлені кути заповнення скролбара */
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  font-style: normal;
+  cursor: pointer;
+}
+
+p,
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+a {
+  cursor: pointer;
+}

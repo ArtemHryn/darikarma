@@ -1,0 +1,67 @@
+@use "@/styles/main.scss" as *;
+
+.button {
+  transition: all 250ms ease;
+  @media all and (width >= $min_table) {
+    display: none;
+  }
+  @media (hover: hover) {
+    &:is(:hover, :focus) {
+      scale: 1.05;
+    }
+  }
+  @media (hover: none) {
+    &:is(:active, :focus) {
+      scale: 1.05;
+    }
+  }
+}
+
+.show_icon {
+  width: 56px;
+  height: 17px;
+}
+
+//nav list
+
+.menu_wrapper {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  gap: 16px;
+  padding: 15px 0px 35px;
+  border-radius: 30px;
+  backdrop-filter: blur(25px);
+  background: rgba(255, 255, 255, 0.4);
+  translate: 0% 40%;
+  opacity: 1;
+  transition: all 600ms ease;
+  z-index: 10;
+}
+
+.menu_wrapper_hidden {
+  opacity: 0;
+  translate: 0% 70%;
+  transition: all 250ms ease;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.close_icon {
+  width: 22px;
+  height: 22px;
+}
+
+.nav_list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.nav_link {
+  @include fontRegular(18px, 400, 18px);
+}

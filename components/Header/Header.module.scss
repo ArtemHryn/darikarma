@@ -1,0 +1,27 @@
+@use "@/styles/main.scss" as *;
+
+.header {
+  padding: 20px 0px;
+  position: relative;
+  border-bottom: 2px solid transparent; /* Це необхідно для того, щоб видати базовий простір для фону */
+  background-image: linear-gradient(to left, $border 40%, transparent 50%);
+  background-size: 10px 1px; /* Задайте розмір рисочок та їхню відстань */
+  background-repeat: repeat-x;
+  background-position: bottom;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-inline: auto;
+  height: 100%;
+  max-width: $min_mobile;
+  width: 100%;
+  @media all and (width >= $min_table) {
+    max-width: $min_table;
+  }
+  @media all and (width >= $min_desktop) {
+    max-width: $min_desktop;
+  }
+}
