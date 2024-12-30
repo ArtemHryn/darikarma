@@ -1,8 +1,11 @@
 //colors
 $title_text_color: #9072af;
 $main_text_color: #000;
+$seconds_text_color: #161616;
 $border: #422f56;
+$border_v2: #9072af;
 $btn_active_bg: #9072af;
+$button_text_color: #fff;
 //sizes
 
 $min_mobile: 360px;
@@ -10,3 +13,6 @@ $min_table: 768px;
 $min_desktop: 1280px;
 $mac: 1312px;
 $big_monitor: 1440px;
+
+//other
+$buttons_and_links_hover: all 250ms ease;

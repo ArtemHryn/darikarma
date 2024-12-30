@@ -1,0 +1,26 @@
+@use "@/styles/main.scss" as *;
+
+.section {
+  padding: 40px 0;
+}
+
+.container {
+  max-width: $min_mobile;
+  padding: 0 24px;
+  margin-inline: auto;
+  position: relative;
+  @media all and (width >= $min_table) {
+    max-width: $min_table;
+    padding: 0 33px;
+  }
+  @media all and (width >= $min_desktop) {
+    max-width: $min_desktop;
+    padding: 0 62px;
+  }
+  @media all and (width >= $mac) {
+    padding: 0 78px;
+  }
+  @media all and (width >= $big_monitor) {
+    padding: 0 142px;
+  }
+}
