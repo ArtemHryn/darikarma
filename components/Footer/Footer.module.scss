@@ -1,5 +1,12 @@
 @use "@/styles/main.scss" as *;
 
+.footer {
+  padding-bottom: 40px;
+  @media all and (width >= $min_table) {
+    padding-bottom: 48px;
+  }
+}
+
 .container {
   display: flex;
   flex-direction: column;

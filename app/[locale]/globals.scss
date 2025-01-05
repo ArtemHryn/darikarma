@@ -18,25 +18,11 @@ body {
   position: relative;
   color: $main_text_color;
   background-image: linear-gradient(
-    to bottom,
+    to right,
     rgba(158, 118, 255, 0.18) 50%,
     #fff
   );
-
-  background-size: 200% 200%;
-  animation: rotateBackground 5s linear infinite;
-}
-
-@keyframes rotateBackground {
-  0% {
-    background-position: 0% 0%;
-  }
-  50% {
-    background-position: 100% 70%;
-  }
-  100% {
-    background-position: 0% 0%;
-  }
+  background-size: 100% 100%;
 }
 
 ::-webkit-scrollbar {

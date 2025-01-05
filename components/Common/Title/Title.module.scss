@@ -1,0 +1,11 @@
+@use "@/styles/main.scss" as *;
+
+.title {
+  @include fontRegular(48px, 400, 48px, $title_text_color);
+  @media all and (width >= $min_table) {
+    font-size: 80px;
+  }
+  @media all and (width >= $min_desktop) {
+    font-size: 90px;
+  }
+}

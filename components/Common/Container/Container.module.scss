@@ -2,6 +2,9 @@
 
 .section {
   padding: 40px 0;
+  @media all and (width >= $min_table) {
+    padding-bottom: 48px 0;
+  }
 }
 
 .container {
