@@ -11,12 +11,10 @@ import "./globals.scss";
 export const cormorant = Cormorant({
   subsets: ["cyrillic"],
   weight: ["300", "400", "500", "600", "700"],
-  adjustFontFallback: false,
 });
 export const cormorant_sc = Cormorant_SC({
   subsets: ["cyrillic"],
   weight: ["300", "400", "500", "600", "700"],
-  adjustFontFallback: false,
 });
 export const geologica = Geologica({
   subsets: ["cyrillic"],
@@ -31,10 +29,10 @@ const navLink = [
   },
   {
     name: { uk: "Кармічний менеджмент", ru: "Кармический менеджмент" },
-    link: "karma-consultations",
+    link: "/karma-consultations",
   },
-  { name: { uk: "Калькулятор", ru: "Калькулятор" }, link: "calculator" },
-  { name: { uk: "Контакти", ru: "Контакты" }, link: "contacts" },
+  { name: { uk: "Калькулятор", ru: "Калькулятор" }, link: "/calculator" },
+  { name: { uk: "Контакти", ru: "Контакты" }, link: "/contacts" },
 ];
 
 export default async function RootLayout({ children, params }) {
@@ -42,7 +40,7 @@ export default async function RootLayout({ children, params }) {
   if (!routing.locales.includes(locale)) {
     notFound();
   }
-  const messages = await getMessages();
+  const messages = await getMessages(locale);
 
   return (
     <html lang={locale}>

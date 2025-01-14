@@ -1,9 +1,12 @@
 @use "@/styles/main.scss" as *;
 
 .section {
+  position: relative;
   padding: 40px 0;
+  max-width: 100vw;
+  overflow: hidden;
   @media all and (width >= $min_table) {
-    padding-bottom: 48px 0;
+    padding: 48px 0px;
   }
 }
 

@@ -1,0 +1,28 @@
+@use "@/styles/main.scss" as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  @media all and (width >= $min_table) {
+    gap: 64px;
+  }
+}
+
+.bg_svg {
+  @media all and (width <= $min_desktop) {
+    display: none;
+  }
+  position: absolute;
+  width: 120vw;
+  height: 550px;
+  top: 12%;
+  left: -22%;
+}
+
+.decor_img {
+  position: absolute;
+  left: 78vw;
+  top: 55%;
+  width: 200px;
+}
