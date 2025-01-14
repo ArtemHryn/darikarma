@@ -27,7 +27,7 @@ const Cards = () => {
       {cards.map((item, id) => (
         <li
           key={id}
-          className={`${styles.card_item} ${styles.card_item}_${id + 1}`}
+          className={`${styles.card_item} ${styles[`card_item_${id + 1}`]}`}
         >
           <Hidder />
           <Card item={item} id={id} />
