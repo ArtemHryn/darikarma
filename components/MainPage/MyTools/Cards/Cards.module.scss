@@ -1,0 +1,80 @@
+@use "@/styles/main.scss" as *;
+
+.card_list {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  z-index: 2;
+  @media all and (width >= $min_table) {
+    flex-direction: row;
+    gap: 16px;
+  }
+  @media all and (width >= $min_desktop) {
+    justify-content: center;
+    gap: 32px;
+  }
+}
+
+.card_item {
+  position: relative;
+  max-width: 243px;
+  height: 369px;
+  border-radius: 25px;
+  box-shadow: 3px 6px 4px 0 rgba(0, 0, 0, 0.25);
+  background: linear-gradient(40deg, #fff 0%, #fffeff 80.54%, #ddd9dd 100%);
+  &_1 {
+    rotate: 4deg;
+    translate: -6% 0;
+  }
+  &_2 {
+    rotate: -8deg;
+    translate: 10% 0;
+  }
+  &_3 {
+    rotate: 7deg;
+    translate: 1% 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    border-radius: 21px;
+    inset: 5px;
+    border: 0.8px solid #d7cae3;
+    pointer-events: none;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    border-radius: 21px;
+    inset: 8px;
+    border: 0.4px solid #d7cae3;
+    pointer-events: none;
+  }
+  @media all and (width >= $min_table) {
+    rotate: 0deg;
+    translate: 0;
+    max-width: 100%;
+    width: calc((100% - 16px * 2) / 3);
+  }
+  @media all and (width >= $min_desktop) {
+    width: 304px;
+    height: 460px;
+    &_1 {
+      order: 2;
+    }
+    &_2 {
+      order: 1;
+      rotate: -6deg;
+    }
+    &_3 {
+      rotate: 6deg;
+      translate: -3% 0%;
+      order: 3;
+    }
+  }
+}
+
+

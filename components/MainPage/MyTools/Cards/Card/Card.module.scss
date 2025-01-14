@@ -1,0 +1,56 @@
+@use "@/styles/main.scss" as *;
+
+.text_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 10px 22px;
+  @media all and (width >= $min_desktop) {
+    padding: 12px 22px;
+    gap: 20px;
+  }
+}
+.card_title {
+  @include fontRegular(17px, 500, 17px, $title_text_color, left, 0.03em);
+  @media all and (width >= $min_desktop) {
+    font-size: 23px;
+  }
+}
+
+.card_text {
+  @include fontRegular(14px, 400, 14px);
+  @media all and (width >= $min_desktop) {
+    font-size: 16px;
+  }
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 136px;
+  height: 30px;
+  margin-inline: auto;
+  border-radius: 24px;
+  background-color: $btn_active_bg;
+  border: 1px solid $border_v2;
+  @include fontRegular(14px, 300, 14px, $button_text_color2, center, 0.03em);
+  @media (hover: hover) {
+    &:is(:hover, :focus) {
+      color: $title_text_color;
+      background-color: transparent;
+    }
+  }
+  @media (hover: none) {
+    &:is(:active, :focus) {
+      color: $title_text_color;
+      background-color: transparent;
+    }
+  }
+  @media all and (width >= $min_desktop) {
+    width: 170px;
+    height: 38px;
+  }
+}
+
+

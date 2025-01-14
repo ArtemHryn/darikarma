@@ -1,0 +1,43 @@
+@use "@/styles/main.scss" as *;
+
+.hider {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  transition: all 350ms ease;
+  opacity: 1;
+  & > img {
+    max-width: 268px;
+    width: 253px;
+    height: 382px;
+    @media all and (width >= $min_table) {
+      width: 234px;
+      height: 383px;
+      flex-grow: 1;
+    }
+    @media all and (width >= $min_desktop) {
+      position: relative;
+      translate: 0.5% 0;
+      width: 314px;
+      max-width: 480px;
+      height: 480px;
+    }
+  }
+  @media all and (width >= $min_desktop) {
+    width: 300px;
+    height: 462px;
+  }
+  @media (hover: none) {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.show {
+  opacity: 0;
+  pointer-events: none;
+}

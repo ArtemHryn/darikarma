@@ -20,6 +20,7 @@ const Hero = () => {
           src={"/assets/images/main_hero/main_hero.webp"}
           alt="darikarma"
           className={styles.img}
+          priority={true}
         />
         <div className={styles.link_wrapper}>
           <Link href={"#services"} className={`${styles.link}`}>
@@ -39,6 +40,7 @@ const Hero = () => {
         src={"/assets/images/main_hero/main_hero.webp"}
         alt="darikarma"
         className={styles.img_desktop}
+        priority={true}
       />
     </Container>
   );

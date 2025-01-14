@@ -1,5 +1,5 @@
 {
-  "Main": {
-    "test": "ru"
+  "Metadata": {
+    "Main": { "title": "DariKarma ru", "description": "DariKarma description" }
   }
 }

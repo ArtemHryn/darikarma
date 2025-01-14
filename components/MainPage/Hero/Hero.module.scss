@@ -53,6 +53,8 @@
 
 .img {
   margin-bottom: 16px;
+  width: 100%;
+  height: auto;
   @media all and (width >= $min_table) {
     width: 615px;
   }
@@ -60,6 +62,8 @@
     display: none;
   }
   &_desktop {
+    width: 100%;
+    height: auto;
     display: none;
     @media all and (width >= $min_desktop) {
       display: block;
