@@ -77,8 +77,15 @@ button {
   border: none;
   background-color: transparent;
   cursor: pointer;
-}
-
-a {
-  cursor: pointer;
+  transition: $buttons_and_links_hover;
+  @media (hover: hover) {
+    &:is(:hover, :focus) {
+      scale: 1.05;
+    }
+  }
+  @media (hover: none) {
+    &:is(:active, :focus) {
+      scale: 1.05;
+    }
+  }
 }

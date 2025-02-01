@@ -1,0 +1,17 @@
+@use "@/styles/main.scss" as *;
+
+.title {
+  margin-bottom: 32px;
+}
+
+.desc_wrapper {
+  position: relative;
+  margin-bottom: 90px;
+  @media all and (width >= $min_table) {
+    display: none;
+  }
+  @media all and (width >= $min_desktop) {
+    display: block;
+    margin-bottom: 24px;
+  }
+}

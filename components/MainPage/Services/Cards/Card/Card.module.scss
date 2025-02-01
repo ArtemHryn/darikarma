@@ -1,0 +1,84 @@
+@use "@/styles/main.scss" as *;
+
+.item {
+  position: relative;
+  width: 301px;
+  height: 354px;
+  border: 2px solid $border_v3;
+  border-radius: 24px;
+  padding: 140px 17px 0px 17px;
+  @media all and (width >= $min_table) {
+    width: 340px;
+    height: 467px;
+    padding: 190px 33px 0px 33px;
+  }
+  @media all and (width >= $min_desktop) {
+    width: 376px;
+  }
+}
+
+.img {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.name {
+  width: 143px;
+  @include fontRegular(25px, 400, 25px, $title_text_color);
+  @media all and (width >= $min_table) {
+    font-size: 35px;
+    width: 210px;
+  }
+}
+
+.about_list {
+  display: flex;
+  flex-direction: column;
+  max-width: 70%;
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-bottom: 8px;
+  @media all and (width >= $min_table) {
+    margin-bottom: 16px;
+  }
+}
+
+.about_text {
+  @include fontRegular(16px, 400, 16px, rgba(0, 0, 0, 0.8));
+  @media all and (width >= $min_table) {
+    font-size: 18px;
+  }
+}
+
+.price {
+  @include fontRegular(18px, 400, 18px);
+  @media all and (width >= $min_table) {
+    font-size: 24px;
+  }
+}
+
+.button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 40px;
+  width: 266px;
+  height: 44px;
+  background: #9071af;
+  translate: 0% 50%;
+  margin-inline: auto;
+  @include fontRegular(14px, 300, 14px, $button_text_color, center, 0.03em);
+  @media all and (width >= $min_table) {
+    width: 270px;
+    height: 52px;
+  }
+}

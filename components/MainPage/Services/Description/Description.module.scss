@@ -1,0 +1,43 @@
+@use "@/styles/main.scss" as *;
+
+.desc {
+  width: 173px;
+  @include fontRegular(20px, 400, 22px, $title_text_color, left);
+  font-style: italic;
+  text-wrap: balance;
+  margin-left: auto;
+  @media all and (width >= $min_table) {
+    font-size: 30px;
+    margin-inline: auto;
+    width: 270px;
+  }
+  @media all and (width >= $min_desktop) {
+    width: 100%;
+    text-align: right;
+  }
+}
+
+.img {
+  position: absolute;
+  top: -20%;
+  left: 40%;
+  @media all and (width >= $min_table) {
+    top: 0%;
+    left: 5%;
+  }
+  @media all and (width >= $min_desktop) {
+    left: 56%;
+  }
+}
+
+.line {
+  position: absolute;
+  display: none;
+  @media all and (width >= $min_desktop) {
+    display: block;
+    width: 404px;
+    height: 142px;
+    top: -300%;
+    left: 20%;
+  }
+}
