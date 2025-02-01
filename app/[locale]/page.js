@@ -1,7 +1,8 @@
+import { getTranslations } from "next-intl/server";
 import Hero from "@/components/MainPage/Hero/Hero";
 import AboutAuthor from "@/components/MainPage/AboutAuthor/AboutAuthor";
-import { getTranslations } from "next-intl/server";
 import MyTools from "@/components/MainPage/MyTools/MyTools";
+import Services from "@/components/MainPage/Services/Services";
 
 export async function generateMetadata({ params }) {
   const locale = (await params).locale;
@@ -83,6 +84,7 @@ export default function Home() {
       <Hero />
       <AboutAuthor />
       <MyTools />
+      <Services />
     </main>
   );
 }
