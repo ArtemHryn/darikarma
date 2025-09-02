@@ -1,0 +1,61 @@
+@use "@/styles/main.scss" as *;
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  @media (width > $min_table) {
+    flex-wrap: wrap;
+    height: calc((64px + 12px) * 3);
+    align-items: flex-start;
+  }
+
+  @media (width > $min_desktop) {
+    height: 300px;
+    gap: 45px;
+    width: 90%;
+  }
+}
+
+.list_item {
+  @media (width > $min_desktop) {
+    &:nth-child(1) {
+      align-self: self-end;
+    }
+    &:nth-child(3) {
+      align-self: self-end;
+    }
+    &:nth-child(4) {
+      align-self: self-end;
+    }
+    &:nth-child(6) {
+      align-self: self-end;
+    }
+  }
+}
+
+.link {
+  height: 38px;
+  width: 168px;
+  font-size: 14px;
+  @media (width > $min_table) {
+    height: 64px;
+    width: 278px;
+    font-size: 1.5rem;
+  }
+  @media (width > $min_desktop) {
+    width: 435px;
+    &:nth-child(1) {
+      margin-right: auto;
+    }
+  }
+}
+
+.img {
+  position: relative;
+  width: 147px;
+  height: 226px;
+  top: 10%;
+  left: 10%;
+}

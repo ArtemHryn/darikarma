@@ -1,0 +1,24 @@
+@use "@/styles/main.scss" as *;
+
+.wrappers {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 64px;
+  border: 1px solid $border_v2;
+  border-radius: 60px;
+  background-color: $btn_active_bg;
+  @include fontRegular(18px, 500, 18px, #fefdff, center, 0.03em);
+}
+
+.link {
+  background-color: transparent;
+  color: $title_text_color;
+}
