@@ -1,4 +1,31 @@
 @use "@/styles/main.scss" as *;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --main-btn-bg: #9072af;
+  --second-text-color: #fff;
+}
+
+@layer utilities {
+  .text-balanced {
+    text-wrap: balance;
+  }
+}
+
+@layer components {
+  .main-btn {
+    @apply flex items-center justify-center 
+    bg-main-btn-bg rounded-[60px] border border-solid border-main-btn-bg text-second-text-color 
+    font-medium text-[18px] leading-[24px] transition-all duration-200 ease-in-out xm:w-[365px] xm:h-[64px] xm:mx-auto;
+  }
+  .additional-btn {
+    @apply flex items-center justify-center 
+    bg-transparent rounded-[60px] border border-solid border-main-btn-bg text-main-btn-bg 
+    font-medium text-[18px] leading-[24px] transition-all duration-200 ease-in-out xm:w-[365px] xm:h-[64px] xm:mx-auto;
+  }
+}
 
 * {
   box-sizing: border-box;

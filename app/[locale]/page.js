@@ -3,6 +3,9 @@ import Hero from "@/components/MainPage/Hero/Hero";
 import AboutAuthor from "@/components/MainPage/AboutAuthor/AboutAuthor";
 import MyTools from "@/components/MainPage/MyTools/MyTools";
 import Services from "@/components/MainPage/Services/Services";
+// import TransformGames from "@/components/MainPage/TransformGames/TransformGames";
+import Feedbacks from "@/components/MainPage/Feedbacks/Feedbacks";
+import Contacts from "@/components/MainPage/Contacts/Contacts";
 
 export async function generateMetadata({ params }) {
   const locale = (await params).locale;
@@ -85,6 +88,9 @@ export default function Home() {
       <AboutAuthor />
       <MyTools />
       <Services />
+      {/* <TransformGames /> */}
+      <Feedbacks />
+      <Contacts />
     </main>
   );
 }
